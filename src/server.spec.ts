@@ -8,6 +8,6 @@ describe('sample test', () => {
   });
   it('引数ありの場合、引数で処理されること', () => {
     const result = decorateText('example');
-    expect(result).toBe('[example]');
+    expect(result).toBe('[----]');
   });
 });
