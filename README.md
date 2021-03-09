@@ -1,7 +1,3 @@
-# {projectName}
-
-- {description}
-
 ## Required
 
 - Node.js 14+
