@@ -1,0 +1,35 @@
+name: Bug report
+description: 不具合票を作成する
+labels:
+  - 'bug'
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        不具合について記述してください
+  - type: textarea
+    id: how-to-bug
+    attributes:
+      label: 不具合内容
+      description: 設計がない場合、以下の行を実装する内容の説明に置き換える
+      placeholder: |-
+        以下の手順で操作すると、ほにゃららな不具合が発生する
+
+        1. あああ
+        2. いいい
+        3. ううう
+    validations:
+      required: true
+  - type: textarea
+    id: fix-policy
+    attributes:
+      label: 対応内容
+      description: どの様に対応するか、どうなればよいか
+    validations:
+      required: true
+  - type: textarea
+    id: todo
+    attributes:
+      label: 備考
+    validations:
+      required: false
