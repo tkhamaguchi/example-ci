@@ -1,53 +1,29 @@
-name: Bug Report
-description: File a bug report
-labels: [bug, triage]
-assignees:
-  - octocat
+name: Core enhancement issues
+description: 画面の本実装課題を作成する
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: what-happened
+    id: program-design
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: 設計
+      description: 設計がない場合、以下の行を実装する内容の説明に置き換える
+      value: '- [設計](ここに設計スライドのパス)'
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - "test: foo"
-        - "test: bar"
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: todo
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: ToDo
+      description: やることリスト、不要な項目は削除し、必要な項目は追加する
+      value: |-
+        - [ ] 画面レイアウト
+        - [ ] バリデ
+        - [ ] API 結合
+        - [ ] API 結合動作確認
+        - [ ] ページ遷移制御確認
+        - [ ] 必要に応じて Context など必要な内容が引き継がれていること
+    validations:
+      required: true
